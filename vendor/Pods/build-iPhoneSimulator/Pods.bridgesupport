@@ -1,0 +1,2194 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct name='css_dim_t' type='{_css_dim_t=&quot;dimensions&quot;[2f]}'>
+<field declared_type='float*' name='dimensions' type='[2f]'/>
+</struct>
+<struct name='css_layout_t' type='{_css_layout_t=&quot;position&quot;[2f]&quot;dimensions&quot;[2f]&quot;should_update&quot;B&quot;last_requested_dimensions&quot;[2f]&quot;last_parent_max_width&quot;f&quot;last_dimensions&quot;[2f]&quot;last_position&quot;[2f]}'>
+<field declared_type='float*' name='position' type='[2f]'/>
+<field declared_type='float*' name='dimensions' type='[2f]'/>
+<field declared_type='_Bool' name='should_update' type='B'/>
+<field declared_type='float*' name='last_requested_dimensions' type='[2f]'/>
+<field declared_type='float' name='last_parent_max_width' type='f'/>
+<field declared_type='float*' name='last_dimensions' type='[2f]'/>
+<field declared_type='float*' name='last_position' type='[2f]'/>
+</struct>
+<struct name='css_node' type='{css_node=&quot;style&quot;{_css_style_t=&quot;flex_direction&quot;i&quot;justify_content&quot;i&quot;align_items&quot;i&quot;align_self&quot;i&quot;position_type&quot;i&quot;flex_wrap&quot;i&quot;flex&quot;f&quot;margin&quot;[4f]&quot;position&quot;[4f]&quot;padding&quot;[4f]&quot;border&quot;[4f]&quot;dimensions&quot;[2f]}&quot;layout&quot;{_css_layout_t=&quot;position&quot;[2f]&quot;dimensions&quot;[2f]&quot;should_update&quot;B&quot;last_requested_dimensions&quot;[2f]&quot;last_parent_max_width&quot;f&quot;last_dimensions&quot;[2f]&quot;last_position&quot;[2f]}&quot;children_count&quot;i&quot;measure&quot;^?&quot;print&quot;^?&quot;get_child&quot;^?&quot;is_dirty&quot;^?&quot;context&quot;^v}'>
+<field declared_type='css_style_t' name='style' type='{_css_style_t=&quot;flex_direction&quot;i&quot;justify_content&quot;i&quot;align_items&quot;i&quot;align_self&quot;i&quot;position_type&quot;i&quot;flex_wrap&quot;i&quot;flex&quot;f&quot;margin&quot;[4f]&quot;position&quot;[4f]&quot;padding&quot;[4f]&quot;border&quot;[4f]&quot;dimensions&quot;[2f]}'/>
+<field declared_type='css_layout_t' name='layout' type='{_css_layout_t=&quot;position&quot;[2f]&quot;dimensions&quot;[2f]&quot;should_update&quot;B&quot;last_requested_dimensions&quot;[2f]&quot;last_parent_max_width&quot;f&quot;last_dimensions&quot;[2f]&quot;last_position&quot;[2f]}'/>
+<field declared_type='int' name='children_count' type='i'/>
+<field declared_type='css_dim_t (*)(void *, float)' function_pointer='true' name='measure' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='float' type='f'/>
+<retval declared_type='css_dim_t' type='{_css_dim_t=[2f]}'/>
+</field>
+<field declared_type='void (*)(void *)' function_pointer='true' name='print' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='struct css_node *(*)(void *, int)' function_pointer='true' name='get_child' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='struct css_node*' type='^{css_node={?=iiiiiif[4f][4f][4f][4f][2f]}{?=[2f][2f]B[2f]f[2f][2f]}i^?^?^?^?^v}'/>
+</field>
+<field declared_type='_Bool (*)(void *)' function_pointer='true' name='is_dirty' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='_Bool' type='B'/>
+</field>
+<field declared_type='void*' name='context' type='^v'/>
+</struct>
+<struct name='css_node_t' type='{css_node=&quot;style&quot;{_css_style_t=&quot;flex_direction&quot;i&quot;justify_content&quot;i&quot;align_items&quot;i&quot;align_self&quot;i&quot;position_type&quot;i&quot;flex_wrap&quot;i&quot;flex&quot;f&quot;margin&quot;[4f]&quot;position&quot;[4f]&quot;padding&quot;[4f]&quot;border&quot;[4f]&quot;dimensions&quot;[2f]}&quot;layout&quot;{_css_layout_t=&quot;position&quot;[2f]&quot;dimensions&quot;[2f]&quot;should_update&quot;B&quot;last_requested_dimensions&quot;[2f]&quot;last_parent_max_width&quot;f&quot;last_dimensions&quot;[2f]&quot;last_position&quot;[2f]}&quot;children_count&quot;i&quot;measure&quot;^?&quot;print&quot;^?&quot;get_child&quot;^?&quot;is_dirty&quot;^?&quot;context&quot;^v}'>
+<field declared_type='css_style_t' name='style' type='{_css_style_t=&quot;flex_direction&quot;i&quot;justify_content&quot;i&quot;align_items&quot;i&quot;align_self&quot;i&quot;position_type&quot;i&quot;flex_wrap&quot;i&quot;flex&quot;f&quot;margin&quot;[4f]&quot;position&quot;[4f]&quot;padding&quot;[4f]&quot;border&quot;[4f]&quot;dimensions&quot;[2f]}'/>
+<field declared_type='css_layout_t' name='layout' type='{_css_layout_t=&quot;position&quot;[2f]&quot;dimensions&quot;[2f]&quot;should_update&quot;B&quot;last_requested_dimensions&quot;[2f]&quot;last_parent_max_width&quot;f&quot;last_dimensions&quot;[2f]&quot;last_position&quot;[2f]}'/>
+<field declared_type='int' name='children_count' type='i'/>
+<field declared_type='css_dim_t (*)(void *, float)' function_pointer='true' name='measure' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='float' type='f'/>
+<retval declared_type='css_dim_t' type='{_css_dim_t=[2f]}'/>
+</field>
+<field declared_type='void (*)(void *)' function_pointer='true' name='print' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='struct css_node *(*)(void *, int)' function_pointer='true' name='get_child' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='struct css_node*' type='^{css_node={?=iiiiiif[4f][4f][4f][4f][2f]}{?=[2f][2f]B[2f]f[2f][2f]}i^?^?^?^?^v}'/>
+</field>
+<field declared_type='_Bool (*)(void *)' function_pointer='true' name='is_dirty' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='_Bool' type='B'/>
+</field>
+<field declared_type='void*' name='context' type='^v'/>
+</struct>
+<struct name='css_style_t' type='{_css_style_t=&quot;flex_direction&quot;i&quot;justify_content&quot;i&quot;align_items&quot;i&quot;align_self&quot;i&quot;position_type&quot;i&quot;flex_wrap&quot;i&quot;flex&quot;f&quot;margin&quot;[4f]&quot;position&quot;[4f]&quot;padding&quot;[4f]&quot;border&quot;[4f]&quot;dimensions&quot;[2f]}'>
+<field declared_type='css_flex_direction_t' name='flex_direction' type='i'/>
+<field declared_type='css_justify_t' name='justify_content' type='i'/>
+<field declared_type='css_align_t' name='align_items' type='i'/>
+<field declared_type='css_align_t' name='align_self' type='i'/>
+<field declared_type='css_position_type_t' name='position_type' type='i'/>
+<field declared_type='css_wrap_type_t' name='flex_wrap' type='i'/>
+<field declared_type='float' name='flex' type='f'/>
+<field declared_type='float*' name='margin' type='[4f]'/>
+<field declared_type='float*' name='position' type='[4f]'/>
+<field declared_type='float*' name='padding' type='[4f]'/>
+<field declared_type='float*' name='border' type='[4f]'/>
+<field declared_type='float*' name='dimensions' type='[2f]'/>
+</struct>
+<constant const='true' declared_type='NSString*' name='RCTIsHighlightedAttributeName' type='@'/>
+<constant declared_type='NSString**' name='RCTLogLevels' type='^@'/>
+<constant const='true' declared_type='CLLocationDegrees' name='RCTMapDefaultSpan' type='d'/>
+<constant const='true' declared_type='NSTimeInterval' name='RCTMapRegionChangeObserveInterval' type='d'/>
+<constant const='true' declared_type='CGFloat' name='RCTMapZoomBoundBuffer' type='f' type64='d'/>
+<constant const='true' declared_type='NSString*' name='RCTReactTagAttributeName' type='@'/>
+<string_constant name='RCTErrorDomain' nsstring='true' value='RCTErrorDomain'/>
+<enum name='CSS_ALIGN_AUTO' value='0'/>
+<enum name='CSS_ALIGN_CENTER' value='2'/>
+<enum name='CSS_ALIGN_FLEX_END' value='3'/>
+<enum name='CSS_ALIGN_FLEX_START' value='1'/>
+<enum name='CSS_ALIGN_STRETCH' value='4'/>
+<enum name='CSS_BOTTOM' value='3'/>
+<enum name='CSS_FLEX_DIRECTION_COLUMN' value='0'/>
+<enum name='CSS_FLEX_DIRECTION_ROW' value='1'/>
+<enum name='CSS_HEIGHT' value='1'/>
+<enum name='CSS_JUSTIFY_CENTER' value='1'/>
+<enum name='CSS_JUSTIFY_FLEX_END' value='2'/>
+<enum name='CSS_JUSTIFY_FLEX_START' value='0'/>
+<enum name='CSS_JUSTIFY_SPACE_AROUND' value='4'/>
+<enum name='CSS_JUSTIFY_SPACE_BETWEEN' value='3'/>
+<enum name='CSS_LEFT' value='0'/>
+<enum name='CSS_NOWRAP' value='0'/>
+<enum name='CSS_POSITION_ABSOLUTE' value='1'/>
+<enum name='CSS_POSITION_COUNT' value='4'/>
+<enum name='CSS_POSITION_RELATIVE' value='0'/>
+<enum name='CSS_PRINT_CHILDREN' value='4'/>
+<enum name='CSS_PRINT_LAYOUT' value='1'/>
+<enum name='CSS_PRINT_STYLE' value='2'/>
+<enum name='CSS_RIGHT' value='2'/>
+<enum name='CSS_TOP' value='1'/>
+<enum name='CSS_UNDEFINED' value='NaN'/>
+<enum name='CSS_WIDTH' value='0'/>
+<enum name='CSS_WRAP' value='1'/>
+<enum name='RCTAnimationTypeEaseIn' value='2'/>
+<enum name='RCTAnimationTypeEaseInEaseOut' value='4'/>
+<enum name='RCTAnimationTypeEaseOut' value='3'/>
+<enum name='RCTAnimationTypeLinear' value='1'/>
+<enum name='RCTAnimationTypeSpring' value='0'/>
+<enum name='RCTBorderSideBottom' value='2'/>
+<enum name='RCTBorderSideLeft' value='3'/>
+<enum name='RCTBorderSideRight' value='1'/>
+<enum name='RCTBorderSideTop' value='0'/>
+<enum name='RCTLOG_ERROR' value='3'/>
+<enum name='RCTLOG_FATAL_LEVEL' value='5'/>
+<enum name='RCTLOG_INFO' value='1'/>
+<enum name='RCTLOG_MUSTFIX' value='4'/>
+<enum name='RCTLOG_REDBOX_LEVEL' value='5'/>
+<enum name='RCTLOG_WARN' value='2'/>
+<enum name='RCTPointerEventsBoxNone' value='2'/>
+<enum name='RCTPointerEventsBoxOnly' value='3'/>
+<enum name='RCTPointerEventsNone' value='1'/>
+<enum name='RCTPointerEventsUnspecified' value='0'/>
+<enum name='RCTScrollEventTypeEnd' value='2'/>
+<enum name='RCTScrollEventTypeEndAnimation' value='5'/>
+<enum name='RCTScrollEventTypeEndDeceleration' value='4'/>
+<enum name='RCTScrollEventTypeMove' value='1'/>
+<enum name='RCTScrollEventTypeStart' value='0'/>
+<enum name='RCTScrollEventTypeStartDeceleration' value='3'/>
+<enum name='RCTTextEventTypeBlur' value='1'/>
+<enum name='RCTTextEventTypeChange' value='2'/>
+<enum name='RCTTextEventTypeEnd' value='4'/>
+<enum name='RCTTextEventTypeFocus' value='0'/>
+<enum name='RCTTextEventTypeSubmit' value='3'/>
+<enum name='RCTUpdateLifecycleComputed' value='1'/>
+<enum name='RCTUpdateLifecycleDirtied' value='2'/>
+<enum name='RCTUpdateLifecycleUninitialized' value='0'/>
+<function name='RCTCeilPixelValue'>
+<arg declared_type='CGFloat' name='value' type='f' type64='d'/>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</function>
+<function name='RCTClassOverridesClassMethod'>
+<arg declared_type='Class' name='cls' type='#'/>
+<arg declared_type='SEL' name='selector' type=':'/>
+<retval declared_type='BOOL' type='B'/>
+</function>
+<function name='RCTClassOverridesInstanceMethod'>
+<arg declared_type='Class' name='cls' type='#'/>
+<arg declared_type='SEL' name='selector' type=':'/>
+<retval declared_type='BOOL' type='B'/>
+</function>
+<function name='RCTCopyProperty'>
+<arg declared_type='id' name='target' type='@'/>
+<arg declared_type='id' name='source' type='@'/>
+<arg declared_type='NSString*' name='keyPath' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</function>
+<function name='RCTEnumerateClasses'>
+<arg declared_type='void (^)(Class)' function_pointer='true' name='block' type='@?'>
+<arg declared_type='Class' type='#'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='RCTFloorPixelValue'>
+<arg declared_type='CGFloat' name='value' type='f' type64='d'/>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</function>
+<function name='RCTInjectAssertFunctions'>
+<arg declared_type='RCTAssertFunction' function_pointer='true' name='assertFunction' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSString*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='RCTAssertFunction' function_pointer='true' name='cAssertFunction' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSString*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='RCTInjectLogFunction'>
+<arg declared_type='void (^)(NSString *)' function_pointer='true' name='logFunction' type='@?'>
+<arg declared_type='NSString*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='RCTIsReactRootView'>
+<arg declared_type='NSNumber*' name='reactTag' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</function>
+<function name='RCTJSONParse'>
+<arg declared_type='NSString*' name='jsonString' type='@'/>
+<arg declared_type='NSError**' name='error' type='^@'/>
+<retval declared_type='id' type='@'/>
+</function>
+<function name='RCTJSONStringify'>
+<arg declared_type='id' name='jsonObject' type='@'/>
+<arg declared_type='NSError**' name='error' type='^@'/>
+<retval declared_type='NSString*' type='@'/>
+</function>
+<function name='RCTLogFormat' variadic='true'>
+<arg const='true' declared_type='char*' name='file' type='*'/>
+<arg declared_type='int' name='lineNumber' type='i'/>
+<arg const='true' declared_type='char*' name='funcName' type='*'/>
+<arg declared_type='NSString*' name='format' printf_format='true' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</function>
+<function name='RCTLogObjects'>
+<arg declared_type='NSArray*' name='objects' type='@'/>
+<arg declared_type='NSString*' name='level' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</function>
+<function name='RCTMD5Hash'>
+<arg declared_type='NSString*' name='string' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</function>
+<function name='RCTMakeAndLogError'>
+<arg declared_type='NSString*' name='message' type='@'/>
+<arg declared_type='id' name='toStringify' type='@'/>
+<arg declared_type='NSDictionary*' name='extraData' type='@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</function>
+<function name='RCTMakeError'>
+<arg declared_type='NSString*' name='message' type='@'/>
+<arg declared_type='id' name='toStringify' type='@'/>
+<arg declared_type='NSDictionary*' name='extraData' type='@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</function>
+<function name='RCTRoundPixelValue'>
+<arg declared_type='CGFloat' name='value' type='f' type64='d'/>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</function>
+<function name='RCTScreenScale'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</function>
+<function name='RCTScreenSize'>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</function>
+<function name='RCTSetProperty'>
+<arg declared_type='id' name='target' type='@'/>
+<arg declared_type='NSString*' name='keyPath' type='@'/>
+<arg declared_type='SEL' name='type' type=':'/>
+<arg declared_type='id' name='json' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</function>
+<function name='RCTSwapClassMethods'>
+<arg declared_type='Class' name='cls' type='#'/>
+<arg declared_type='SEL' name='original' type=':'/>
+<arg declared_type='SEL' name='replacement' type=':'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='RCTSwapInstanceMethods'>
+<arg declared_type='Class' name='cls' type='#'/>
+<arg declared_type='SEL' name='original' type=':'/>
+<arg declared_type='SEL' name='replacement' type=':'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='RCTTGetAbsoluteTime'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</function>
+<function name='free_css_node'>
+<arg declared_type='css_node_t*' name='node' type='^{css_node={_css_style_t=iiiiiif[4f][4f][4f][4f][2f]}{_css_layout_t=[2f][2f]B[2f]f[2f][2f]}i^?^?^?^?^v}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='init_css_node'>
+<arg declared_type='css_node_t*' name='node' type='^{css_node={_css_style_t=iiiiiif[4f][4f][4f][4f][2f]}{_css_layout_t=[2f][2f]B[2f]f[2f][2f]}i^?^?^?^?^v}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='isUndefined'>
+<arg declared_type='float' name='value' type='f'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='layoutNode'>
+<arg declared_type='css_node_t*' name='node' type='^{css_node={_css_style_t=iiiiiif[4f][4f][4f][4f][2f]}{_css_layout_t=[2f][2f]B[2f]f[2f][2f]}i^?^?^?^?^v}'/>
+<arg declared_type='float' name='maxWidth' type='f'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='new_css_node'>
+<retval declared_type='css_node_t*' type='^{css_node={_css_style_t=iiiiiif[4f][4f][4f][4f][2f]}{_css_layout_t=[2f][2f]B[2f]f[2f][2f]}i^?^?^?^?^v}'/>
+</function>
+<function name='print_css_node'>
+<arg declared_type='css_node_t*' name='node' type='^{css_node={_css_style_t=iiiiiif[4f][4f][4f][4f][2f]}{_css_layout_t=[2f][2f]B[2f]f[2f][2f]}i^?^?^?^?^v}'/>
+<arg declared_type='css_print_options_t' name='options' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<class name='NSObject'>
+<method class_method='true' selector='JSMethods'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='automaticallyAdjustContentInsets'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='batchDidComplete'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bridge'>
+<retval declared_type='RCTBridge*' type='@'/>
+</method>
+<method selector='constantsToExport'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='contentInset'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='contentSize'>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='currentBottomLayoutGuide'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='currentTopLayoutGuide'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='executeApplicationScript:sourceURL:onComplete:'>
+<arg declared_type='NSString*' index='0' name='script' type='@'/>
+<arg declared_type='NSURL*' index='1' name='url' type='@'/>
+<arg declared_type='RCTJavaScriptCompleteBlock' function_pointer='true' index='2' name='onComplete' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='executeJSCall:method:arguments:callback:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<arg declared_type='NSString*' index='1' name='method' type='@'/>
+<arg declared_type='NSArray*' index='2' name='arguments' type='@'/>
+<arg declared_type='RCTJavaScriptCallback' function_pointer='true' index='3' name='onComplete' type='@?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='injectJSONText:asGlobalObjectNamed:callback:'>
+<arg declared_type='NSString*' index='0' name='script' type='@'/>
+<arg declared_type='NSString*' index='1' name='objectName' type='@'/>
+<arg declared_type='RCTJavaScriptCompleteBlock' function_pointer='true' index='2' name='onComplete' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='insertReactSubview:atIndex:'>
+<arg declared_type='id' index='0' name='subview' type='@'/>
+<arg declared_type='NSInteger' index='1' name='atIndex' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='invalidate'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='isReactRootView'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isValid'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='moduleName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='nativeMainScrollDelegate'>
+<retval declared_type='NSObject*' type='@'/>
+</method>
+<method selector='reactBridgeDidFinishTransaction'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reactSubviews'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='reactSuperview'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='reactTag'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='reactTagAtPoint:'>
+<arg declared_type='CGPoint' index='0' name='point' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='removeReactSubview:'>
+<arg declared_type='id' index='0' name='subview' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='scrollToOffset:'>
+<arg declared_type='CGPoint' index='0' name='offset' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='scrollToOffset:animated:'>
+<arg declared_type='CGPoint' index='0' name='offset' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<arg declared_type='BOOL' index='1' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAutomaticallyAdjustContentInsets:'>
+<arg declared_type='BOOL' index='0' name='automaticallyAdjustContentInsets' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBridge:'>
+<arg declared_type='RCTBridge*' index='0' name='bridge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentInset:'>
+<arg declared_type='UIEdgeInsets' index='0' name='contentInset' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNativeMainScrollDelegate:'>
+<arg declared_type='NSObject*' index='0' name='nativeMainScrollDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReactTag:'>
+<arg declared_type='NSNumber*' index='0' name='reactTag' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unhandledJSExceptionWithMessage:stack:'>
+<arg declared_type='NSString*' index='0' name='message' type='@'/>
+<arg declared_type='NSArray*' index='1' name='stack' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='wrapperViewController:didMoveToNavigationController:'>
+<arg declared_type='RCTWrapperViewController*' index='0' name='wrapperViewController' type='@'/>
+<arg declared_type='UINavigationController*' index='1' name='navigationController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='zoomToRect:animated:'>
+<arg declared_type='CGRect' index='0' name='rect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='BOOL' index='1' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTAsyncLocalStorage'>
+<method selector='clear:'>
+<arg declared_type='RCTResponseSenderBlock' function_pointer='true' index='0' name='callback' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='getAllKeys:'>
+<arg declared_type='RCTResponseSenderBlock' function_pointer='true' index='0' name='callback' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='multiGet:callback:'>
+<arg declared_type='NSArray*' index='0' name='keys' type='@'/>
+<arg declared_type='RCTResponseSenderBlock' function_pointer='true' index='1' name='callback' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='multiRemove:callback:'>
+<arg declared_type='NSArray*' index='0' name='keys' type='@'/>
+<arg declared_type='RCTResponseSenderBlock' function_pointer='true' index='1' name='callback' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='multiSet:callback:'>
+<arg declared_type='NSArray*' index='0' name='kvPairs' type='@'/>
+<arg declared_type='RCTResponseSenderBlock' function_pointer='true' index='1' name='callback' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTBridge'>
+<method selector='enqueueApplicationScript:url:onComplete:'>
+<arg declared_type='NSString*' index='0' name='script' type='@'/>
+<arg declared_type='NSURL*' index='1' name='url' type='@'/>
+<arg declared_type='RCTJavaScriptCompleteBlock' function_pointer='true' index='2' name='onComplete' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='enqueueJSCall:args:'>
+<arg declared_type='NSString*' index='0' name='moduleDotMethod' type='@'/>
+<arg declared_type='NSArray*' index='1' name='args' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='eventDispatcher'>
+<retval declared_type='RCTEventDispatcher*' type='@'/>
+</method>
+<method class_method='true' selector='hasValidJSExecutor'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithBundlePath:moduleProvider:launchOptions:'>
+<arg declared_type='NSString*' index='0' name='bundlepath' type='@'/>
+<arg declared_type='RCTBridgeModuleProviderBlock' function_pointer='true' index='1' name='block' type='@?'>
+<retval declared_type='NSArray*' type='@'/>
+</arg>
+<arg declared_type='NSDictionary*' index='2' name='launchOptions' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='launchOptions'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='log:level:'>
+<arg declared_type='NSArray*' index='0' name='objects' type='@'/>
+<arg declared_type='NSString*' index='1' name='level' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='modules'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='shadowQueue'>
+<retval declared_type='dispatch_queue_t' type='@'/>
+</method>
+<method selector='uiManager'>
+<retval declared_type='RCTUIManager*' type='@'/>
+</method>
+</class>
+<class name='RCTCache'>
+<method selector='fetchDataForKey:completionHandler:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<arg declared_type='void (^)(NSData *)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSData*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='hasDataForKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithName:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='maximumDiskSize'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='removeAllData'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setData:forKey:'>
+<arg declared_type='NSData*' index='0' name='data' type='@'/>
+<arg declared_type='NSString*' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaximumDiskSize:'>
+<arg declared_type='NSUInteger' index='0' name='maximumDiskSize' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTContextExecutor'>
+<method selector='initWithJavaScriptThread:globalContextRef:'>
+<arg declared_type='NSThread*' index='0' name='javaScriptThread' type='@'/>
+<arg declared_type='JSGlobalContextRef' index='1' name='context' type='^{OpaqueJSContext=}'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='RCTConvert'>
+<method class_method='true' selector='BOOL:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='CATransform3D:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='CATransform3D' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+</method>
+<method class_method='true' selector='CGAffineTransform:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='CGAffineTransform' type='{CGAffineTransform=ffffff}' type64='{CGAffineTransform=dddddd}'/>
+</method>
+<method class_method='true' selector='CGColor:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='CGColorRef' type='^{CGColor=}'/>
+</method>
+<method class_method='true' selector='CGColorArray:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='CGFloat:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method class_method='true' selector='CGImage:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='CGImageRef' type='^{CGImage=}'/>
+</method>
+<method class_method='true' selector='CGLineCap:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='CGLineCap' type='i'/>
+</method>
+<method class_method='true' selector='CGLineJoin:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='CGLineJoin' type='i'/>
+</method>
+<method class_method='true' selector='CGPoint:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='CGPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+</method>
+<method class_method='true' selector='CGRect:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method class_method='true' selector='CGSize:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method class_method='true' selector='NSArray:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='NSDate:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method class_method='true' selector='NSDictionary:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='NSDictionaryArray:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='NSInteger:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='NSNumber:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method class_method='true' selector='NSNumberArray:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='NSString:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='NSStringArray:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='NSTextAlignment:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSTextAlignment' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='NSTimeInterval:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method class_method='true' selector='NSTimeZone:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSTimeZone*' type='@'/>
+</method>
+<method class_method='true' selector='NSUInteger:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method class_method='true' selector='NSURL:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method class_method='true' selector='NSURLArray:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='NSURLRequest:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSURLRequest*' type='@'/>
+</method>
+<method class_method='true' selector='NSWritingDirection:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSWritingDirection' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='RCTAnimationType:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='RCTAnimationType' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='RCTPointerEvents:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='RCTPointerEvents' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='UIBarStyle:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='UIBarStyle' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='UIColor:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method class_method='true' selector='UIColorArray:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='UIEdgeInsets:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method class_method='true' selector='UIFont:withFamily:'>
+<arg declared_type='UIFont*' index='0' name='font' type='@'/>
+<arg declared_type='id' index='1' name='json' type='@'/>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+<method class_method='true' selector='UIFont:withFamily:size:weight:style:'>
+<arg declared_type='UIFont*' index='0' name='font' type='@'/>
+<arg declared_type='id' index='1' name='family' type='@'/>
+<arg declared_type='id' index='2' name='size' type='@'/>
+<arg declared_type='id' index='3' name='weight' type='@'/>
+<arg declared_type='id' index='4' name='style' type='@'/>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+<method class_method='true' selector='UIFont:withSize:'>
+<arg declared_type='UIFont*' index='0' name='font' type='@'/>
+<arg declared_type='id' index='1' name='json' type='@'/>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+<method class_method='true' selector='UIFont:withStyle:'>
+<arg declared_type='UIFont*' index='0' name='font' type='@'/>
+<arg declared_type='id' index='1' name='json' type='@'/>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+<method class_method='true' selector='UIFont:withWeight:'>
+<arg declared_type='UIFont*' index='0' name='font' type='@'/>
+<arg declared_type='id' index='1' name='json' type='@'/>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+<method class_method='true' selector='UIImage:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='UIKeyboardType:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='UIKeyboardType' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='UIScrollViewKeyboardDismissMode:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='UIScrollViewKeyboardDismissMode' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='UITextAutocapitalizationType:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='UITextAutocapitalizationType' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='UITextFieldViewMode:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='UITextFieldViewMode' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='UIViewContentMode:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='UIViewContentMode' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='css_align_t:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='css_align_t' type='i'/>
+</method>
+<method class_method='true' selector='css_flex_direction_t:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='css_flex_direction_t' type='i'/>
+</method>
+<method class_method='true' selector='css_justify_t:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='css_justify_t' type='i'/>
+</method>
+<method class_method='true' selector='css_overflow:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='css_position_type_t:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='css_position_type_t' type='i'/>
+</method>
+<method class_method='true' selector='css_wrap_type_t:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='css_wrap_type_t' type='i'/>
+</method>
+<method class_method='true' selector='double:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='double' type='d'/>
+</method>
+<method class_method='true' selector='float:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='float' type='f'/>
+</method>
+<method class_method='true' selector='int64_t:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='int64_t' type='q'/>
+</method>
+<method class_method='true' selector='int:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='int' type='i'/>
+</method>
+<method class_method='true' selector='uint64_t:'>
+<arg declared_type='id' index='0' name='json' type='@'/>
+<retval declared_type='uint64_t' type='Q'/>
+</method>
+</class>
+<class name='RCTDevMenu'>
+<method selector='initWithRootView:'>
+<arg declared_type='RCTRootView*' index='0' name='rootView' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='show'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTEventDispatcher'>
+<method selector='initWithBridge:'>
+<arg declared_type='RCTBridge*' index='0' name='bridge' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='sendAppEventWithName:body:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<arg declared_type='id' index='1' name='body' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendDeviceEventWithName:body:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<arg declared_type='id' index='1' name='body' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendInputEventWithName:body:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='body' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendScrollEventWithType:reactTag:scrollView:userData:'>
+<arg declared_type='RCTScrollEventType' index='0' name='type' type='i' type64='q'/>
+<arg declared_type='NSNumber*' index='1' name='reactTag' type='@'/>
+<arg declared_type='UIScrollView*' index='2' name='scrollView' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='userData' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendTextEventWithType:reactTag:text:'>
+<arg declared_type='RCTTextEventType' index='0' name='type' type='i' type64='q'/>
+<arg declared_type='NSNumber*' index='1' name='reactTag' type='@'/>
+<arg declared_type='NSString*' index='2' name='text' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTExceptionsManager'>
+<method selector='initWithDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='RCTKeyCommands'>
+<method selector='isKeyCommandRegisteredForInput:modifierFlags:'>
+<arg declared_type='NSString*' index='0' name='input' type='@'/>
+<arg declared_type='UIKeyModifierFlags' index='1' name='flags' type='i' type64='q'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='registerKeyCommandWithInput:modifierFlags:action:'>
+<arg declared_type='NSString*' index='0' name='input' type='@'/>
+<arg declared_type='UIKeyModifierFlags' index='1' name='flags' type='i' type64='q'/>
+<arg declared_type='void (^)(UIKeyCommand *)' function_pointer='true' index='2' name='block' type='@?'>
+<arg declared_type='UIKeyCommand*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedInstance'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='unregisterKeyCommandWithInput:modifierFlags:'>
+<arg declared_type='NSString*' index='0' name='input' type='@'/>
+<arg declared_type='UIKeyModifierFlags' index='1' name='flags' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTMap'>
+<method selector='followUserLocation'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='legalLabelInsets'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='maxDelta'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='minDelta'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='regionChangeObserveTimer'>
+<retval declared_type='NSTimer*' type='@'/>
+</method>
+<method selector='setFollowUserLocation:'>
+<arg declared_type='BOOL' index='0' name='followUserLocation' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLegalLabelInsets:'>
+<arg declared_type='UIEdgeInsets' index='0' name='legalLabelInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxDelta:'>
+<arg declared_type='CGFloat' index='0' name='maxDelta' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinDelta:'>
+<arg declared_type='CGFloat' index='0' name='minDelta' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRegionChangeObserveTimer:'>
+<arg declared_type='NSTimer*' index='0' name='regionChangeObserveTimer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTNavItem'>
+<method selector='backButtonTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='barTintColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='rightButtonTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setBackButtonTitle:'>
+<arg declared_type='NSString*' index='0' name='backButtonTitle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBarTintColor:'>
+<arg declared_type='UIColor*' index='0' name='barTintColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRightButtonTitle:'>
+<arg declared_type='NSString*' index='0' name='rightButtonTitle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTintColor:'>
+<arg declared_type='UIColor*' index='0' name='tintColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:'>
+<arg declared_type='NSString*' index='0' name='title' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitleTextColor:'>
+<arg declared_type='UIColor*' index='0' name='titleTextColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='tintColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='titleTextColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+</class>
+<class name='RCTNavigator'>
+<method selector='initWithEventDispatcher:'>
+<arg declared_type='RCTEventDispatcher*' index='0' name='eventDispatcher' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='reactNavSuperviewLink'>
+<retval declared_type='UIView*' type='@'/>
+</method>
+<method selector='requestSchedulingJavaScriptNavigation'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='requestedTopOfStack'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setReactNavSuperviewLink:'>
+<arg declared_type='UIView*' index='0' name='reactNavSuperviewLink' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRequestedTopOfStack:'>
+<arg declared_type='NSInteger' index='0' name='requestedTopOfStack' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTPicker'>
+<method selector='initWithEventDispatcher:'>
+<arg declared_type='RCTEventDispatcher*' index='0' name='eventDispatcher' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='items'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='selectedIndex'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setItems:'>
+<arg declared_type='NSArray*' index='0' name='items' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSelectedIndex:'>
+<arg declared_type='NSInteger' index='0' name='selectedIndex' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTRedBox'>
+<method selector='currentErrorMessage'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='dismiss'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedInstance'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='showErrorMessage:'>
+<arg declared_type='NSString*' index='0' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showErrorMessage:withDetails:'>
+<arg declared_type='NSString*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='details' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showErrorMessage:withStack:'>
+<arg declared_type='NSString*' index='0' name='message' type='@'/>
+<arg declared_type='NSArray*' index='1' name='stack' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateErrorMessage:withStack:'>
+<arg declared_type='NSString*' index='0' name='message' type='@'/>
+<arg declared_type='NSArray*' index='1' name='stack' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTRootView'>
+<method selector='enableDevMenu'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='endAndResetInteractionTiming'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='executorClass'>
+<retval declared_type='Class' type='#'/>
+</method>
+<method selector='initWithBundleURL:moduleName:launchOptions:'>
+<arg declared_type='NSURL*' index='0' name='bundleURL' type='@'/>
+<arg declared_type='NSString*' index='1' name='moduleName' type='@'/>
+<arg declared_type='NSDictionary*' index='2' name='launchOptions' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initialProperties'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='moduleName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='moduleProvider'>
+<retval declared_type='RCTBridgeModuleProviderBlock' function_pointer='true' type='@?'>
+<retval declared_type='NSArray*' type='@'/>
+</retval>
+</method>
+<method selector='reload'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='reloadAll'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='scriptURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='setEnableDevMenu:'>
+<arg declared_type='BOOL' index='0' name='enableDevMenu' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExecutorClass:'>
+<arg declared_type='Class' index='0' name='executorClass' type='#'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInitialProperties:'>
+<arg declared_type='NSDictionary*' index='0' name='initialProperties' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setScriptURL:'>
+<arg declared_type='NSURL*' index='0' name='scriptURL' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startOrResetInteractionTiming'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTScrollView'>
+<method selector='automaticallyAdjustContentInsets'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='centerContent'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='contentInset'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='contentSize'>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='contentView'>
+<retval declared_type='UIView*' type='@'/>
+</method>
+<method selector='initWithEventDispatcher:'>
+<arg declared_type='RCTEventDispatcher*' index='0' name='eventDispatcher' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='scrollView'>
+<retval declared_type='UIScrollView*' type='@'/>
+</method>
+<method selector='setAutomaticallyAdjustContentInsets:'>
+<arg declared_type='BOOL' index='0' name='automaticallyAdjustContentInsets' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCenterContent:'>
+<arg declared_type='BOOL' index='0' name='centerContent' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentInset:'>
+<arg declared_type='UIEdgeInsets' index='0' name='contentInset' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentSize:'>
+<arg declared_type='CGSize' index='0' name='contentSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStickyHeaderIndices:'>
+<arg declared_type='NSArray*' index='0' name='stickyHeaderIndices' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setThrottleScrollCallbackMS:'>
+<arg declared_type='NSUInteger' index='0' name='throttleScrollCallbackMS' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stickyHeaderIndices'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='throttleScrollCallbackMS'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+</class>
+<class name='RCTShadowRawText'>
+<method selector='setText:'>
+<arg declared_type='NSString*' index='0' name='text' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='text'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='RCTShadowText'>
+<method selector='attributedString'>
+<retval declared_type='NSAttributedString*' type='@'/>
+</method>
+<method selector='color'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='font'>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+<method selector='fontFamily'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='fontSize'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='fontStyle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='fontWeight'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='isHighlighted'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='lineHeight'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='maxNumberOfLines'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setColor:'>
+<arg declared_type='UIColor*' index='0' name='color' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFont:'>
+<arg declared_type='UIFont*' index='0' name='font' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFontFamily:'>
+<arg declared_type='NSString*' index='0' name='fontFamily' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFontSize:'>
+<arg declared_type='CGFloat' index='0' name='fontSize' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFontStyle:'>
+<arg declared_type='NSString*' index='0' name='fontStyle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFontWeight:'>
+<arg declared_type='NSString*' index='0' name='fontWeight' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIsHighlighted:'>
+<arg declared_type='BOOL' index='0' name='isHighlighted' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLineHeight:'>
+<arg declared_type='CGFloat' index='0' name='lineHeight' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxNumberOfLines:'>
+<arg declared_type='NSInteger' index='0' name='maxNumberOfLines' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShadowOffset:'>
+<arg declared_type='CGSize' index='0' name='shadowOffset' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTextAlign:'>
+<arg declared_type='NSTextAlignment' index='0' name='textAlign' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTextBackgroundColor:'>
+<arg declared_type='UIColor*' index='0' name='textBackgroundColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTruncationMode:'>
+<arg declared_type='NSLineBreakMode' index='0' name='truncationMode' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWritingDirection:'>
+<arg declared_type='NSWritingDirection' index='0' name='writingDirection' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shadowOffset'>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='textAlign'>
+<retval declared_type='NSTextAlignment' type='i' type64='q'/>
+</method>
+<method selector='textBackgroundColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='truncationMode'>
+<retval declared_type='NSLineBreakMode' type='i' type64='q'/>
+</method>
+<method selector='writingDirection'>
+<retval declared_type='NSWritingDirection' type='i' type64='q'/>
+</method>
+</class>
+<class name='RCTShadowView'>
+<method selector='alignItems'>
+<retval declared_type='css_align_t' type='i'/>
+</method>
+<method selector='alignSelf'>
+<retval declared_type='css_align_t' type='i'/>
+</method>
+<method selector='backgroundColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='borderBottomWidth'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='borderLeftWidth'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='borderRightWidth'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='borderTopWidth'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='bottom'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='collectRootUpdatedFrames:parentConstraint:'>
+<arg declared_type='NSMutableSet*' index='0' name='viewsWithNewFrame' type='@'/>
+<arg declared_type='CGSize' index='1' name='parentConstraint' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='collectUpdatedProperties:parentProperties:'>
+<arg declared_type='NSMutableSet*' index='0' name='applierBlocks' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='parentProperties' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cssNode'>
+<retval declared_type='css_node_t*' type='^{css_node={_css_style_t=iiiiiif[4f][4f][4f][4f][2f]}{_css_layout_t=[2f][2f]B[2f]f[2f][2f]}i^?^?^?^?^v}'/>
+</method>
+<method selector='dirtyLayout'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='dirtyPropagation'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='dirtyText'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fillCSSNode:'>
+<arg declared_type='css_node_t*' index='0' name='node' type='^{css_node={_css_style_t=iiiiiif[4f][4f][4f][4f][2f]}{_css_layout_t=[2f][2f]B[2f]f[2f][2f]}i^?^?^?^?^v}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='flex'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='flexDirection'>
+<retval declared_type='css_flex_direction_t' type='i'/>
+</method>
+<method selector='flexWrap'>
+<retval declared_type='css_wrap_type_t' type='i'/>
+</method>
+<method selector='frame'>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='height'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='isBGColorExplicitlySet'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isLayoutDirty'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isNewView'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isPropagationDirty'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isTextDirty'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='justifyContent'>
+<retval declared_type='css_justify_t' type='i'/>
+</method>
+<method selector='layoutLifecycle'>
+<retval declared_type='RCTUpdateLifecycle' type='I' type64='Q'/>
+</method>
+<method selector='left'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='marginBottom'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='marginLeft'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='marginRight'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='marginTop'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='measureLayoutRelativeToAncestor:'>
+<arg declared_type='RCTShadowView*' index='0' name='ancestor' type='@'/>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='paddingAsInsets'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='paddingBottom'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='paddingLeft'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='paddingRight'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='paddingTop'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='positionType'>
+<retval declared_type='css_position_type_t' type='i'/>
+</method>
+<method selector='right'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='setAlignItems:'>
+<arg declared_type='css_align_t' index='0' name='alignItems' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAlignSelf:'>
+<arg declared_type='css_align_t' index='0' name='alignSelf' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundColor:'>
+<arg declared_type='UIColor*' index='0' name='backgroundColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderBottomWidth:'>
+<arg declared_type='CGFloat' index='0' name='borderBottomWidth' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderLeftWidth:'>
+<arg declared_type='CGFloat' index='0' name='borderLeftWidth' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderRightWidth:'>
+<arg declared_type='CGFloat' index='0' name='borderRightWidth' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderTopWidth:'>
+<arg declared_type='CGFloat' index='0' name='borderTopWidth' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderWidth:'>
+<arg declared_type='CGFloat' index='0' name='value' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBottom:'>
+<arg declared_type='CGFloat' index='0' name='bottom' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFlex:'>
+<arg declared_type='CGFloat' index='0' name='flex' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFlexDirection:'>
+<arg declared_type='css_flex_direction_t' index='0' name='flexDirection' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFlexWrap:'>
+<arg declared_type='css_wrap_type_t' index='0' name='flexWrap' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFrame:'>
+<arg declared_type='CGRect' index='0' name='frame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeight:'>
+<arg declared_type='CGFloat' index='0' name='height' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIsBGColorExplicitlySet:'>
+<arg declared_type='BOOL' index='0' name='isBGColorExplicitlySet' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setJustifyContent:'>
+<arg declared_type='css_justify_t' index='0' name='justifyContent' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLayoutLifecycle:'>
+<arg declared_type='RCTUpdateLifecycle' index='0' name='layoutLifecycle' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeft:'>
+<arg declared_type='CGFloat' index='0' name='left' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMargin:'>
+<arg declared_type='CGFloat' index='0' name='margin' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMarginBottom:'>
+<arg declared_type='CGFloat' index='0' name='marginBottom' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMarginHorizontal:'>
+<arg declared_type='CGFloat' index='0' name='margin' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMarginLeft:'>
+<arg declared_type='CGFloat' index='0' name='marginLeft' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMarginRight:'>
+<arg declared_type='CGFloat' index='0' name='marginRight' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMarginTop:'>
+<arg declared_type='CGFloat' index='0' name='marginTop' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMarginVertical:'>
+<arg declared_type='CGFloat' index='0' name='margin' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNewView:'>
+<arg declared_type='BOOL' index='0' name='newView' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPadding:'>
+<arg declared_type='CGFloat' index='0' name='padding' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPaddingBottom:'>
+<arg declared_type='CGFloat' index='0' name='paddingBottom' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPaddingHorizontal:'>
+<arg declared_type='CGFloat' index='0' name='padding' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPaddingLeft:'>
+<arg declared_type='CGFloat' index='0' name='paddingLeft' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPaddingRight:'>
+<arg declared_type='CGFloat' index='0' name='paddingRight' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPaddingTop:'>
+<arg declared_type='CGFloat' index='0' name='paddingTop' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPaddingVertical:'>
+<arg declared_type='CGFloat' index='0' name='padding' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPositionType:'>
+<arg declared_type='css_position_type_t' index='0' name='positionType' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRight:'>
+<arg declared_type='CGFloat' index='0' name='right' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSize:'>
+<arg declared_type='CGSize' index='0' name='size' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSuperview:'>
+<arg declared_type='RCTShadowView*' index='0' name='superview' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTextComputed'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTop:'>
+<arg declared_type='CGFloat' index='0' name='top' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTopLeft:'>
+<arg declared_type='CGPoint' index='0' name='topLeft' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setViewName:'>
+<arg declared_type='NSString*' index='0' name='viewName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWidth:'>
+<arg declared_type='CGFloat' index='0' name='width' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='superview'>
+<retval declared_type='RCTShadowView*' type='@'/>
+</method>
+<method selector='top'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='updateLayout'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='width'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+</class>
+<class name='RCTSourceCode'>
+<method selector='scriptText'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='scriptURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='setScriptText:'>
+<arg declared_type='NSString*' index='0' name='scriptText' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setScriptURL:'>
+<arg declared_type='NSURL*' index='0' name='scriptURL' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTSparseArray'>
+<method selector='allIndexes'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='allObjects'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='count'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='enumerateObjectsUsingBlock:'>
+<arg declared_type='void (^)(id, NSNumber *, BOOL *)' function_pointer='true' index='0' name='block' type='@?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='NSNumber*' type='@'/>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='enumerateObjectsWithOptions:usingBlock:'>
+<arg declared_type='NSEnumerationOptions' index='0' name='opts' type='I' type64='Q'/>
+<arg declared_type='void (^)(id, NSNumber *, BOOL *)' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='NSNumber*' type='@'/>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithCapacity:'>
+<arg declared_type='NSUInteger' index='0' name='capacity' type='I' type64='Q'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithSparseArray:'>
+<arg declared_type='RCTSparseArray*' index='0' name='sparseArray' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='objectAtIndexedSubscript:'>
+<arg declared_type='NSUInteger' index='0' name='idx' type='I' type64='Q'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='objectForKeyedSubscript:'>
+<arg declared_type='NSNumber*' index='0' name='key' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='removeAllObjects'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setObject:atIndexedSubscript:'>
+<arg declared_type='id' index='0' name='obj' type='@'/>
+<arg declared_type='NSUInteger' index='1' name='idx' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setObject:forKeyedSubscript:'>
+<arg declared_type='id' index='0' name='obj' type='@'/>
+<arg declared_type='NSNumber*' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sparseArray'>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='sparseArrayWithCapacity:'>
+<arg declared_type='NSUInteger' index='0' name='capacity' type='I' type64='Q'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='sparseArrayWithSparseArray:'>
+<arg declared_type='RCTSparseArray*' index='0' name='sparseArray' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='RCTSwitch'>
+<method selector='setWasOn:'>
+<arg declared_type='BOOL' index='0' name='wasOn' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='wasOn'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='RCTTabBar'>
+<method selector='initWithEventDispatcher:'>
+<arg declared_type='RCTEventDispatcher*' index='0' name='eventDispatcher' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='RCTTabBarItem'>
+<method selector='barItem'>
+<retval declared_type='UITabBarItem*' type='@'/>
+</method>
+<method selector='icon'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='isSelected'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setIcon:'>
+<arg declared_type='NSString*' index='0' name='icon' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSelected:'>
+<arg declared_type='BOOL' index='0' name='selected' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTText'>
+<method selector='attributedText'>
+<retval declared_type='NSAttributedString*' type='@'/>
+</method>
+<method selector='lineBreakMode'>
+<retval declared_type='NSLineBreakMode' type='i' type64='q'/>
+</method>
+<method selector='numberOfLines'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='setAttributedText:'>
+<arg declared_type='NSAttributedString*' index='0' name='attributedText' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLineBreakMode:'>
+<arg declared_type='NSLineBreakMode' index='0' name='lineBreakMode' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNumberOfLines:'>
+<arg declared_type='NSUInteger' index='0' name='numberOfLines' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTTextField'>
+<method selector='autoCorrect'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='caretHidden'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithEventDispatcher:'>
+<arg declared_type='RCTEventDispatcher*' index='0' name='eventDispatcher' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='paddingEdgeInsets'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='setAutoCorrect:'>
+<arg declared_type='BOOL' index='0' name='autoCorrect' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCaretHidden:'>
+<arg declared_type='BOOL' index='0' name='caretHidden' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPaddingEdgeInsets:'>
+<arg declared_type='UIEdgeInsets' index='0' name='paddingEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTTouchHandler'>
+<method selector='endAndResetInteractionTiming'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='initWithBridge:'>
+<arg declared_type='RCTBridge*' index='0' name='bridge' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='startOrResetInteractionTiming'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTUIManager'>
+<method class_method='true' selector='JSResponder'>
+<retval declared_type='UIView*' type='@'/>
+</method>
+<method selector='addUIBlock:'>
+<arg declared_type='RCTViewManagerUIBlock' function_pointer='true' index='0' name='block' type='@?'>
+<arg declared_type='RCTUIManager*' type='@'/>
+<arg declared_type='RCTSparseArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='mainScrollView'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='nativeMainScrollDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='registerRootView:'>
+<arg declared_type='UIView*' index='0' name='rootView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFrame:forRootView:'>
+<arg declared_type='CGRect' index='0' name='frame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='UIView*' index='1' name='rootView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMainScrollView:'>
+<arg declared_type='id' index='0' name='mainScrollView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNativeMainScrollDelegate:'>
+<arg declared_type='id' index='0' name='nativeMainScrollDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTView'>
+<method class_method='true' selector='autoAdjustInsetsForView:withScrollView:updateOffset:'>
+<arg declared_type='UIView*' index='0' name='parentView' type='@'/>
+<arg declared_type='UIScrollView*' index='1' name='scrollView' type='@'/>
+<arg declared_type='BOOL' index='2' name='updateOffset' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='borderBottomColor'>
+<retval declared_type='CGColorRef' type='^{CGColor=}'/>
+</method>
+<method selector='borderBottomWidth'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='borderColor'>
+<retval declared_type='CGColorRef' type='^{CGColor=}'/>
+</method>
+<method selector='borderLeftColor'>
+<retval declared_type='CGColorRef' type='^{CGColor=}'/>
+</method>
+<method selector='borderLeftWidth'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='borderRightColor'>
+<retval declared_type='CGColorRef' type='^{CGColor=}'/>
+</method>
+<method selector='borderRightWidth'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='borderTopColor'>
+<retval declared_type='CGColorRef' type='^{CGColor=}'/>
+</method>
+<method selector='borderTopWidth'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='borderWidth'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method class_method='true' selector='contentInsetsForView:'>
+<arg declared_type='UIView*' index='0' name='curView' type='@'/>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='pointerEvents'>
+<retval declared_type='RCTPointerEvents' type='i' type64='q'/>
+</method>
+<method selector='removeClippedSubviews'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setBorderBottomColor:'>
+<arg declared_type='CGColorRef' index='0' name='borderBottomColor' type='^{CGColor=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderBottomWidth:'>
+<arg declared_type='CGFloat' index='0' name='borderBottomWidth' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderColor:'>
+<arg declared_type='CGColorRef' index='0' name='borderColor' type='^{CGColor=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderLeftColor:'>
+<arg declared_type='CGColorRef' index='0' name='borderLeftColor' type='^{CGColor=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderLeftWidth:'>
+<arg declared_type='CGFloat' index='0' name='borderLeftWidth' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderRightColor:'>
+<arg declared_type='CGColorRef' index='0' name='borderRightColor' type='^{CGColor=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderRightWidth:'>
+<arg declared_type='CGFloat' index='0' name='borderRightWidth' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderTopColor:'>
+<arg declared_type='CGColorRef' index='0' name='borderTopColor' type='^{CGColor=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderTopWidth:'>
+<arg declared_type='CGFloat' index='0' name='borderTopWidth' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBorderWidth:'>
+<arg declared_type='CGFloat' index='0' name='borderWidth' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPointerEvents:'>
+<arg declared_type='RCTPointerEvents' index='0' name='pointerEvents' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRemoveClippedSubviews:'>
+<arg declared_type='BOOL' index='0' name='removeClippedSubviews' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateClippedSubviews'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTViewManager'>
+<method selector='bridge'>
+<retval declared_type='RCTBridge*' type='@'/>
+</method>
+<method selector='customBubblingEventTypes'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='customDirectEventTypes'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='moduleName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setBridge:'>
+<arg declared_type='RCTBridge*' index='0' name='bridge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shadowView'>
+<retval declared_type='RCTShadowView*' type='@'/>
+</method>
+<method selector='uiBlockToAmendWithShadowView:'>
+<arg declared_type='RCTShadowView*' index='0' name='shadowView' type='@'/>
+<retval declared_type='RCTViewManagerUIBlock' function_pointer='true' type='@?'>
+<arg declared_type='RCTUIManager*' type='@'/>
+<arg declared_type='RCTSparseArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='uiBlockToAmendWithShadowViewRegistry:'>
+<arg declared_type='RCTSparseArray*' index='0' name='shadowViewRegistry' type='@'/>
+<retval declared_type='RCTViewManagerUIBlock' function_pointer='true' type='@?'>
+<arg declared_type='RCTUIManager*' type='@'/>
+<arg declared_type='RCTSparseArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='view'>
+<retval declared_type='UIView*' type='@'/>
+</method>
+</class>
+<class name='RCTWebView'>
+<method selector='URL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='automaticallyAdjustContentInsets'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='contentInset'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='goBack'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='goForward'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithEventDispatcher:'>
+<arg declared_type='RCTEventDispatcher*' index='0' name='eventDispatcher' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='reload'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAutomaticallyAdjustContentInsets:'>
+<arg declared_type='BOOL' index='0' name='automaticallyAdjustContentInsets' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentInset:'>
+<arg declared_type='UIEdgeInsets' index='0' name='contentInset' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldInjectAJAXHandler:'>
+<arg declared_type='BOOL' index='0' name='shouldInjectAJAXHandler' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setURL:'>
+<arg declared_type='NSURL*' index='0' name='URL' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldInjectAJAXHandler'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='RCTWebViewExecutor'>
+<method selector='initWithWebView:'>
+<arg declared_type='UIWebView*' index='0' name='webView' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='invalidateAndReclaimWebView'>
+<retval declared_type='UIWebView*' type='@'/>
+</method>
+<method selector='onApplicationScriptLoaded'>
+<retval declared_type='RCTJavaScriptCompleteBlock' function_pointer='true' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='setOnApplicationScriptLoaded:'>
+<arg declared_type='RCTJavaScriptCompleteBlock' function_pointer='true' index='0' name='onApplicationScriptLoaded' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='RCTWrapperViewController'>
+<method selector='initWithContentView:eventDispatcher:'>
+<arg declared_type='UIView*' index='0' name='contentView' type='@'/>
+<arg declared_type='RCTEventDispatcher*' index='1' name='eventDispatcher' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithNavItem:eventDispatcher:'>
+<arg declared_type='RCTNavItem*' index='0' name='navItem' type='@'/>
+<arg declared_type='RCTEventDispatcher*' index='1' name='eventDispatcher' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='navItem'>
+<retval declared_type='RCTNavItem*' type='@'/>
+</method>
+<method selector='navigationListener'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setNavItem:'>
+<arg declared_type='RCTNavItem*' index='0' name='navItem' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNavigationListener:'>
+<arg declared_type='id' index='0' name='navigationListener' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='UIView'>
+<method selector='addControllerToClosestParent:'>
+<arg declared_type='UIViewController*' index='0' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='backingViewController'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+<method selector='reactDidMakeFirstResponder'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reactRespondsToTouch:'>
+<arg declared_type='UITouch*' index='0' name='touch' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='reactSetFrame:'>
+<arg declared_type='CGRect' index='0' name='frame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reactWillMakeFirstResponder'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='RCTAutoInsetsProtocol'>
+<method selector='automaticallyAdjustContentInsets' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='contentInset' type='{UIEdgeInsets=ffff}8@0:4' type64='{UIEdgeInsets=dddd}16@0:8'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='setAutomaticallyAdjustContentInsets:' type='v12@0:4B8' type64='v20@0:8B16'>
+<arg declared_type='BOOL' index='0' name='automaticallyAdjustContentInsets' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentInset:' type='v24@0:4{UIEdgeInsets=ffff}8' type64='v48@0:8{UIEdgeInsets=dddd}16'>
+<arg declared_type='UIEdgeInsets' index='0' name='contentInset' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RCTBridgeModule'>
+<method selector='batchDidComplete' type='v8@0:4' type64='v16@0:8'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bridge' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='RCTBridge*' type='@'/>
+</method>
+<method selector='constantsToExport' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='moduleName' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setBridge:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='RCTBridge*' index='0' name='bridge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RCTExceptionsManagerDelegate'>
+<method selector='unhandledJSExceptionWithMessage:stack:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='NSString*' index='0' name='message' type='@'/>
+<arg declared_type='NSArray*' index='1' name='stack' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RCTInvalidating'>
+<method selector='invalidate' type='v8@0:4' type64='v16@0:8'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='isValid' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RCTJSMethodRegistrar'>
+<method class_method='true' selector='JSMethods' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RCTJavaScriptExecutor'>
+<method selector='executeApplicationScript:sourceURL:onComplete:' type='v20@0:4@8@12@?16' type64='v40@0:8@16@24@?32'>
+<arg declared_type='NSString*' index='0' name='script' type='@'/>
+<arg declared_type='NSURL*' index='1' name='url' type='@'/>
+<arg declared_type='RCTJavaScriptCompleteBlock' function_pointer='true' index='2' name='onComplete' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='executeJSCall:method:arguments:callback:' type='v24@0:4@8@12@16@?20' type64='v48@0:8@16@24@32@?40'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<arg declared_type='NSString*' index='1' name='method' type='@'/>
+<arg declared_type='NSArray*' index='2' name='arguments' type='@'/>
+<arg declared_type='RCTJavaScriptCallback' function_pointer='true' index='3' name='onComplete' type='@?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='injectJSONText:asGlobalObjectNamed:callback:' type='v20@0:4@8@12@?16' type64='v40@0:8@16@24@?32'>
+<arg declared_type='NSString*' index='0' name='script' type='@'/>
+<arg declared_type='NSString*' index='1' name='objectName' type='@'/>
+<arg declared_type='RCTJavaScriptCompleteBlock' function_pointer='true' index='2' name='onComplete' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RCTScrollableProtocol'>
+<method selector='contentSize' type='{CGSize=ff}8@0:4' type64='{CGSize=dd}16@0:8'>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='nativeMainScrollDelegate' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSObject*' type='@'/>
+</method>
+<method selector='scrollToOffset:' type='v16@0:4{CGPoint=ff}8' type64='v32@0:8{CGPoint=dd}16'>
+<arg declared_type='CGPoint' index='0' name='offset' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='scrollToOffset:animated:' type='v20@0:4{CGPoint=ff}8B16' type64='v36@0:8{CGPoint=dd}16B32'>
+<arg declared_type='CGPoint' index='0' name='offset' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<arg declared_type='BOOL' index='1' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNativeMainScrollDelegate:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSObject*' index='0' name='nativeMainScrollDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='zoomToRect:animated:' type='v28@0:4{CGRect={CGPoint=ff}{CGSize=ff}}8B24' type64='v52@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16B48'>
+<arg declared_type='CGRect' index='0' name='rect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='BOOL' index='1' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RCTViewControllerProtocol'>
+<method selector='currentBottomLayoutGuide' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='currentTopLayoutGuide' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='id' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RCTViewNodeProtocol'>
+<method selector='insertReactSubview:atIndex:' type='v16@0:4@8i12' type64='v32@0:8@16q24'>
+<arg declared_type='id' index='0' name='subview' type='@'/>
+<arg declared_type='NSInteger' index='1' name='atIndex' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='isReactRootView' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='reactBridgeDidFinishTransaction' type='v8@0:4' type64='v16@0:8'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reactSubviews' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='reactSuperview' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='reactTag' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='reactTagAtPoint:' type='@16@0:4{CGPoint=ff}8' type64='@32@0:8{CGPoint=dd}16'>
+<arg declared_type='CGPoint' index='0' name='point' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='removeReactSubview:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='subview' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReactTag:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSNumber*' index='0' name='reactTag' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='RCTWrapperViewControllerNavigationListener'>
+<method selector='wrapperViewController:didMoveToNavigationController:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='RCTWrapperViewController*' index='0' name='wrapperViewController' type='@'/>
+<arg declared_type='UINavigationController*' index='1' name='navigationController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

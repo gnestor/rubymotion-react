@@ -1,0 +1,15 @@
+PODS:
+  - React (0.4.2):
+    - React/Core (= 0.4.2)
+  - React/Core (0.4.2)
+  - React/RCTText (0.4.2):
+    - React/Core
+
+DEPENDENCIES:
+  - React
+  - React/RCTText
+
+SPEC CHECKSUMS:
+  React: 0e657f7a79b9039dee1f39b42196379498cd34f0
+
+COCOAPODS: 0.35.0
