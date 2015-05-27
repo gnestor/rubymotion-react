@@ -4,9 +4,8 @@ Embedded React Native in RubyMotion
 ## Install
 1. Install RubyMotion
 2. Install React Native: https://facebook.github.io/react-native/docs/getting-started.html
-  * Install node
-  * Install npm
-  * Install watchman
+  * Install node: `brew install node`
+  * Install watchman: `brew install watchman`
   * Optional: Install React Native CLI: `npm install -g react-native-cli`
 3. Install bundler: `gem install bundler`
 4. Install gems (motion-cocoapods): `bundle`
@@ -14,7 +13,7 @@ Embedded React Native in RubyMotion
 6. Install cocoapods: `rake pod:install`
 
 ## Run
-1. Run React Native server (run this in a separate terminal tab): `cd vendor/Pods/React && npm start`
+1. Run React Native server (run this in a separate terminal tab): `npm --prefix ./vendor/Pods/React start`
 2. Build your app: `rake` or `rake device`
 
 ## Embedding React Native in an existing RubyMotion project
